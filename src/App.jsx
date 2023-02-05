@@ -8,7 +8,7 @@ import HomePage from './page/HomePage'
 function App() {
 
   return (
-    <div className="bg-[url('/img/hero-pattern.svg')]">
+    <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-screen">
         <Routes>
             <Route path='/' element={<Client />} >
                 <Route index element={<HomePage />} />

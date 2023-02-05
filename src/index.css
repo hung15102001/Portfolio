@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* Banner */
 .banner__main{
     display: grid;
@@ -23,4 +25,13 @@
   display: block;
   transform: scale(1) translateX(0px) translateY(0px);
   margin-top: 32px;
+}
+
+
+/* ==============  Menu ===============*/
+.menu__ul li a{
+  @apply hover:bg-red-500 hover:text-[#ff9933] p-2 rounded hover:text-white
+}
+.menu__ul li{
+  @apply inline ml-6 w-full
 }
