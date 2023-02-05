@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Banner */
+.banner__main{
+    display: grid;
+    grid-template-rows: 26.4634146% 3.0487805% 23.4146341% 5.9756098% 0 21.3414634% 2.0731707% 1.9512195% .1219512%;
+    grid-template-columns: 10.6060606% 4.1414141% 4.6969697% 9.7474747% 6.8181818% 16.1616162% 7.6262626% 15.9090909% 6.969697% auto;
+    grid-gap: calc((100vh - 64px) * .019138756);
+    height: 100%;
+    padding-top: calc((100vh - 64px) * .019138756);
+}
+.banner__child{
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* position: relative; */
+}
+.banner{
+  display: block;
+  transform: scale(1) translateX(0px) translateY(0px);
+  margin-top: 32px;
+}
