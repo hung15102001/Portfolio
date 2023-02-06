@@ -6,9 +6,9 @@ import HomePage from './page/HomePage'
 // import './App.css'
 
 function App() {
-
+  // bg-gradient-to-r from-purple-500 to-pink-500 h-screen
   return (
-    <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-screen">
+    <div className="">
         <Routes>
             <Route path='/' element={<Client />} >
                 <Route index element={<HomePage />} />
