@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logoMeow from "../../public/meow_demo_logo.jpg";
 import en from "../../public/en.png";
@@ -12,34 +12,15 @@ const MenuCli = () => {
             mobile = false
         }
     }
+    useEffect(() => {
+      const test = window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+      console.log(test)
+    },[])
     console.log(mobile)
   return (
-    // <div className="grid grid-cols-3 w-full text-center  py-2 px-4 text-[#674188]">
-    //     <img src={logoMeow} alt="" className=' w-[100px] h-[100px]' />
-    //     <nav className=' col-start-2 col-span-2 flex justify-between'>
-    //         <ul className='hidden menu__ul md:inline-block leading-[100px] text-xl font-bold w-full'>
-    //             <li><NavLink to={""}>HomePage</NavLink></li>
-    //             <li><NavLink to={""}>About Me</NavLink></li>
-    //             <li><NavLink to={""}>Contact Me</NavLink></li>
-    //             <li><NavLink to={""}>Portfolio</NavLink></li>
-    //         </ul>
-    //         <div className=' text-2xl font-bold flex justify-center gap-2 items-center col-span-1'>
-    //             <a href="">
-    //                 <img src={vn} alt="" className='w-[38px] h-[26px]' />
-    //             </a>
-
-    //             <a href="">
-    //                 <img src={en} alt="" className='w-[38px] h-[26px]'/>
-    //             </a>
-    //         </div>
-    //     </nav>
-    //     <div className='md:block'>
-    //         <i class="fa fa-bars"></i>
-    //     </div>
-    // </div>
-
     <div>
-      <nav className="bg-white shadow-lg">
+      {/* bg-white shadow-lg */}
+      <nav className="">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
             <div className="flex space-x-7">
@@ -88,7 +69,7 @@ const MenuCli = () => {
               </a>
               <a
                 href
-                className="py-1 px-1 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300"
+                className="py-1 px-1 font-medium text-white bg-[#fdecef] rounded hover:bg-green-400 transition duration-300"
               >
             
                   <img src={en} alt="" className="w-[38px] h-[26px]" />

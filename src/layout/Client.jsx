@@ -8,7 +8,7 @@ const Client = () => {
     <>
     <section><MenuCli /></section>
     <section><HomeBanner /></section>
-        <div>
+        <div >
               <Outlet />  
         </div>
        

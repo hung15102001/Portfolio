@@ -8,6 +8,7 @@ import HomePage from './page/HomePage'
 function App() {
   // bg-gradient-to-r from-purple-500 to-pink-500 h-screen
   return (
+    // h-screen bg-[url('../../public/background_main.png')] bg-no-repeat bg-cover
     <div className="">
         <Routes>
             <Route path='/' element={<Client />} >
