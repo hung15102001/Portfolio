@@ -4,17 +4,19 @@ import logoMeow from "../../public/meow_demo_logo.jpg";
 import en from "../../public/en.png";
 import vn from "../../public/vi.png";
 const MenuCli = () => {
-    const [mobile, setMobile] = useState(false)
+    // const [mobile, setMobile] = useState(false)
+    // const toggleMenuMobile = () => {
+    //     if(mobile == false){
+    //         mobile = true
+    //     }else{
+    //         mobile = false
+    //     }
+    // }
+    useEffect(() => {
+      const test = window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+      console.log(test)
+    },[])
 
-    const toggleMenuMobile = () => {
-        if(mobile == false){
-            mobile = true
-        }else{
-            mobile = false
-        }
-    }
-    
-   
   return (
     <div>
       {/* bg-white shadow-lg */}
@@ -76,7 +78,7 @@ const MenuCli = () => {
             </div>
 
             <div className="md:hidden flex items-center">
-              <button className="outline-none mobile-menu-button" onClick={()=>{toggleMenuMobile}}>
+              <button className="outline-none mobile-menu-button" onClick={()=>{}}>
                 <svg
                   className=" w-6 h-6 text-gray-500 hover:text-green-500 "
                   x-show="!showMenu"
