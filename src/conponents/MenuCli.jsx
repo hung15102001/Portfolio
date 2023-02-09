@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logoMeow from "../../public/meow_demo_logo.jpg";
 import en from "../../public/en.png";
 import vn from "../../public/vi.png";
 const MenuCli = () => {
     const [mobile, setMobile] = useState(false)
+
     const toggleMenuMobile = () => {
         if(mobile == false){
             mobile = true
@@ -12,11 +13,8 @@ const MenuCli = () => {
             mobile = false
         }
     }
-    useEffect(() => {
-      const test = window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
-      console.log(test)
-    },[])
-    console.log(mobile)
+    
+   
   return (
     <div>
       {/* bg-white shadow-lg */}
