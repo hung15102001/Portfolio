@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logoMeow from "../../public/meow_demo_logo.jpg";
 import en from "../../public/en.png";
