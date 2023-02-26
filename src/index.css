@@ -35,3 +35,20 @@
 .menu__ul li{
   @apply inline ml-6 w-full
 }
+
+/* ======== Profile ======== */
+
+.btn_download_cv svg{
+  display: inherit;
+}
+
+.section_profile{
+  height: 100vh;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 104px;
+}
+
+.menu_profile li{
+  cursor: pointer;
+}

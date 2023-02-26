@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import Client from './layout/Client'
+import Profile from './layout/Profile'
 import HomePage from './page/HomePage'
 // import './App.css'
 
@@ -13,6 +14,10 @@ function App() {
         <Routes>
             <Route path='/' element={<Client />} >
                 <Route index element={<HomePage />} />
+            </Route>
+
+            <Route path='/profile' element={<Profile />} >
+
             </Route>
         </Routes>
     </div>
