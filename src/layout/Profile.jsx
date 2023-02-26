@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineDownload, AiOutlineGlobal, AiOutlineArrowUp  } from "react-icons/ai";
 import { BiChevronsUp } from "react-icons/bi";
 
@@ -8,22 +8,38 @@ const Profile = () => {
     const Skills = useRef(null);
     const WorkExperiences = useRef(null);
     const Work = useRef(null);
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+};
+
+useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+   
+}, []);
     const scroll = (ref) => {
-      console.log(ref);
-      if(ref === 0){
+      // console.log(ref.current.offsetTop);
+      if(ref === '0'){
          window.scrollTo({
           top: 0,
          behavior: 'smooth'
       })
+      setShow(false)
       }else{
         window.scrollTo({
           top: ref.current.offsetTop,
          behavior: 'smooth'
       })
+      setShow(true)
       }
 
     }
-
+    
   return (
     <div className='flex gap-4 '>
       <div className='w-[30%]'>
@@ -33,7 +49,7 @@ const Profile = () => {
             <div className='mt-2'>Based in <span className='text-[#674188] font-bold text-[25px]'>Ha Noi, Viet Name</span></div>
 
             <ul className='menu_profile my-16 text-[#674188] flex flex-col gap-4 text-[25px]  h-auto'>
-                <li onClick={() => scroll(0)}>Home</li>
+                <li onClick={() => scroll('0')}>Home</li>
                 <li onClick={() => scroll(About)}>About </li>
                 <li onClick={()=>scroll(Education)}>Education</li>
                 <li onClick={()=>scroll(Skills)}>Skills</li>   
@@ -93,7 +109,8 @@ const Profile = () => {
             <section className='section_profile' ref={Skills}></section>
             <section className='section_profile' ref={WorkExperiences}></section>
             <section className='section_profile' ref={Work}></section>
-            <div className='scroll_header fixed bottom-10 right-10 border text-[48px] rounded' onClick={() => scroll(0)}>
+
+            <div className={`scroll_header fixed bottom-10 right-10 border text-[48px] rounded cursor-pointer ${scrollPosition > 100  ? "block" : " hidden"  }`} onClick={() => scroll('0')}>
                 <BiChevronsUp />
             </div>
         </div>
