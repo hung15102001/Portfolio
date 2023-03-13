@@ -39,6 +39,10 @@ useEffect(() => {
       }
 
     }
+
+    const DowloadCv = () => {
+
+    }
     
   return (
     <div className='flex gap-4 '>
@@ -70,7 +74,7 @@ useEffect(() => {
             <p className='text-[#674188] text-2xl my-8'>An IT Business Analyst | An English Teacher</p>
 
             <div className='btn_download_cv'>
-                <button className='p-2 text-3xl bg-[#674188] rounded font-bold text-white mt-2'>Download CV  <AiOutlineDownload  /> </button>
+                <button className='p-2 text-3xl bg-[#674188] rounded font-bold text-white mt-2' onClick={DowloadCv} > <a href="../../public/cv.pdf" download> Download </a><AiOutlineDownload  /> </button>
             </div>
             </section>
 
