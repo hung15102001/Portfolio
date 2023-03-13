@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineDownload, AiOutlineGlobal, AiOutlineArrowUp  } from "react-icons/ai";
 import { BiChevronsUp } from "react-icons/bi";
 import { NavLink } from 'react-router-dom';
-// import logo from "../../public/avt_profile.jpg"
+import logo from "../../public/avt_profile.jpg";
+import cv from "../../public/cv.pdf";
 const Profile = () => {
     const About = useRef(null);
     const Education = useRef(null);
@@ -15,8 +16,8 @@ const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
 };
-const logo = "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/314615653_3327368867582098_7480927818991187601_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pWTs0aO3dK8AX9fYIa0&_nc_oc=AQkB_fMREWNKdXCdjw6XEQeziXmX2sAkB0QZHmpq9Mrt1tryvQ216STGcrGc7fZqwfU&_nc_ht=scontent.fhan14-2.fna&oh=00_AfDyM0WrEbAd0IBGPHbBlq0AYam85c1knfHdPi_e1PNGhg&oe=641429A9";
-console.log(logo);
+// const logo = "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/314615653_3327368867582098_7480927818991187601_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pWTs0aO3dK8AX9fYIa0&_nc_oc=AQkB_fMREWNKdXCdjw6XEQeziXmX2sAkB0QZHmpq9Mrt1tryvQ216STGcrGc7fZqwfU&_nc_ht=scontent.fhan14-2.fna&oh=00_AfDyM0WrEbAd0IBGPHbBlq0AYam85c1knfHdPi_e1PNGhg&oe=641429A9";
+// console.log(logo);
 useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
@@ -78,7 +79,7 @@ useEffect(() => {
             <p className='text-[#674188] text-2xl my-8'>An IT Business Analyst | An English Teacher</p>
 
             <div className='btn_download_cv'>
-                <button className='p-2 text-3xl bg-[#674188] rounded font-bold text-white mt-2' onClick={DowloadCv} > <a href="../../public/cv.pdf" download> Download </a><AiOutlineDownload  /> </button>
+                <button className='p-2 text-3xl bg-[#674188] rounded font-bold text-white mt-2' onClick={DowloadCv} > <a href={`${cv}`} download> Download </a><AiOutlineDownload  /> </button>
             </div>
             </section>
 
