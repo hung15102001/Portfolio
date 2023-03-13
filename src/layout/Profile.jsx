@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineDownload, AiOutlineGlobal, AiOutlineArrowUp  } from "react-icons/ai";
 import { BiChevronsUp } from "react-icons/bi";
 import { NavLink } from 'react-router-dom';
-import logo from "../../public/avt_profile.jpg";
+import logo from "../assets/avt_profile.jpg";
 import cv from "../../public/cv.pdf";
 const Profile = () => {
     const About = useRef(null);
@@ -16,8 +16,7 @@ const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
 };
-// const logo = "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/314615653_3327368867582098_7480927818991187601_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pWTs0aO3dK8AX9fYIa0&_nc_oc=AQkB_fMREWNKdXCdjw6XEQeziXmX2sAkB0QZHmpq9Mrt1tryvQ216STGcrGc7fZqwfU&_nc_ht=scontent.fhan14-2.fna&oh=00_AfDyM0WrEbAd0IBGPHbBlq0AYam85c1knfHdPi_e1PNGhg&oe=641429A9";
-// console.log(logo);
+
 useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
@@ -51,9 +50,9 @@ useEffect(() => {
     <div className='flex gap-4 '>
       <div className='w-[30%]'>
         <div className='nav_bar w-[30%] h-screen pt-8 border text-center fixed'>
-            <div className={`bg-white w-40 h-40 rounded-full m-auto bg-[url(${logo})] bg-no-repeat bg-cover bg-center`}>
+            <div className={`bg-white w-40 h-40 rounded-full m-auto bg-center`} style={{backgroundImage:`url(${logo})`, backgroundRepeat:"no-repeat", backgroundSize: "cover"}}>
             </div>
-            <div className='mt-2'>Based in <span className='text-[#674188] font-bold text-[25px]'>Ha Noi, Viet Name</span></div>
+            <div className='mt-2'>Based in <span className='text-[#674188] font-bold text-[25px]'>Ha Noi, Viet Nam</span></div>
 
             <ul className='menu_profile my-16 text-[#674188] flex flex-col gap-4 text-[25px]  h-auto'>
                 <li onClick={() => scroll('0')}>Home</li>
@@ -79,7 +78,7 @@ useEffect(() => {
             <p className='text-[#674188] text-2xl my-8'>An IT Business Analyst | An English Teacher</p>
 
             <div className='btn_download_cv'>
-                <button className='p-2 text-3xl bg-[#674188] rounded font-bold text-white mt-2' onClick={DowloadCv} > <a href={`${cv}`} download> Download </a><AiOutlineDownload  /> </button>
+                <button className='p-2 text-3xl bg-[#674188] rounded font-bold text-white mt-2' onClick={DowloadCv} > <a href={`${cv}`} download> Download <AiOutlineDownload  /> </a> </button>
             </div>
             </section>
 
@@ -88,7 +87,7 @@ useEffect(() => {
             <section className='section_profile' ref={About}>
               
                   <h1 className='text-[18px]'>ABOUT ME
-                    <p className='text-[#674188] font-bold text-[25px]'>WHI AM I?</p>
+                    <p className='text-[#674188] font-bold text-[25px]'>WHO AM I?</p>
                   </h1>
 
                   <div className='my-4 flex flex-col gap-6 text-[#674188]'>

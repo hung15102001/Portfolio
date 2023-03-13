@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logoMeow from "../../public/meow_demo_logo.jpg";
-import en from "../../public/en.png";
+import en from "../assets/en.png";
 import vn from "../../public/vi.png";
 const MenuCli = () => {
     // const [mobile, setMobile] = useState(false)
@@ -31,30 +31,31 @@ const MenuCli = () => {
               </div>
 
               <div className="hidden md:flex items-center space-x-1">
-                <a
-                  href
-                  className="py-4 px-2 text-purple-500 border-b-4 border-purple-500 font-semibold "
+
+                <NavLink
+                  to={"/"}
+                  className="py-4 px-2 text-purple-500 border-b-4 border-purple-500 font-semibold"
                 >
                   Home
-                </a>
+                </NavLink>
                 <NavLink
                   to={"/profile"}
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
                 >
                   Portfolio
                 </NavLink>
-                <a
-                  href
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                <NavLink
+                  to={"/"}
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
                 >
                   About
-                </a>
-                <a
-                  href
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                </NavLink>
+                <NavLink
+                  to={"/"}
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"
                 >
-                  Contact Me
-                </a>
+                  Contact
+                </NavLink>
               </div>
             </div>
 
