@@ -19,13 +19,7 @@ const HomePage = () => {
     dispatch(action)
   }
   return (
-    <div>HomePage
-      <ul>
-          
-      </ul>
     <div>
-      <button className='p-2 bg-green-500 rounded' onClick={handleAdd}>Add article</button>
-    </div>
     </div>
   )
 }

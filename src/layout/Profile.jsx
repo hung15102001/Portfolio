@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineDownload, AiOutlineGlobal, AiOutlineArrowUp  } from "react-icons/ai";
 import { BiChevronsUp } from "react-icons/bi";
-
+import { NavLink } from 'react-router-dom';
+// import logo from "../../public/avt_profile.jpg"
 const Profile = () => {
     const About = useRef(null);
     const Education = useRef(null);
@@ -14,7 +15,8 @@ const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
 };
-
+const logo = "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/314615653_3327368867582098_7480927818991187601_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pWTs0aO3dK8AX9fYIa0&_nc_oc=AQkB_fMREWNKdXCdjw6XEQeziXmX2sAkB0QZHmpq9Mrt1tryvQ216STGcrGc7fZqwfU&_nc_ht=scontent.fhan14-2.fna&oh=00_AfDyM0WrEbAd0IBGPHbBlq0AYam85c1knfHdPi_e1PNGhg&oe=641429A9";
+console.log(logo);
 useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
@@ -48,7 +50,7 @@ useEffect(() => {
     <div className='flex gap-4 '>
       <div className='w-[30%]'>
         <div className='nav_bar w-[30%] h-screen pt-8 border text-center fixed'>
-            <div className='bg-white w-40 h-40 rounded-full m-auto bg-[url("../../public/avt_profile.jpg")] bg-no-repeat bg-cover bg-center'>
+            <div className={`bg-white w-40 h-40 rounded-full m-auto bg-[url(${logo})] bg-no-repeat bg-cover bg-center`}>
             </div>
             <div className='mt-2'>Based in <span className='text-[#674188] font-bold text-[25px]'>Ha Noi, Viet Name</span></div>
 
@@ -59,6 +61,8 @@ useEffect(() => {
                 <li onClick={()=>scroll(Skills)}>Skills</li>   
                 <li onClick={()=>scroll(WorkExperiences)}>Work Experiences</li>
                 <li onClick={()=>scroll(Work)}>Work</li>
+
+                <li ><NavLink to={"/"}>Back</NavLink></li>
             </ul>
         </div>
       </div>
