@@ -52,3 +52,21 @@
 .menu_profile li{
   cursor: pointer;
 }
+
+/* About profile */
+.about_border li{
+  width: 25%;
+  height: auto;
+  border-bottom:1px solid black ;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.about_border li img{
+  margin-bottom: 15px;
+  width: 50px;
+}
+.about_border li p{
+  display: flex;
+  justify-content: center;
+}
